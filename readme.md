@@ -19,10 +19,9 @@
    <a href="https://scholar.google.com.hk/citations?user=Jtmq_m0AAAAJ&hl=zh-CN&oi=sra">Kaicheng Yu</a>
    ·
    <a href="https://scholar.google.com/citations?user=voxznZAAAAAJ">Xiaodan Liang</a>
+<img src="./assets/teaser.png" alt="alignmif" style="zoom: 25%;" />
 
-<img src="/Users/tang/Desktop/teaser_s4.png" alt="mmnerf2" style="zoom: 25%;" />
-
-<img src="/Users/tang/Desktop/mmnerf2.png" alt="mmnerf2" style="zoom: 50%;" />
+<img src="./assets/alignmif.png" alt="alignmif" style="zoom: 50%;" />
 
 This work thoroughly investigated and validated the **misalignment issue** in multimodal NeRF and propose **AlignMiF**, a geometrically aligned multimodal implicit field.
 
