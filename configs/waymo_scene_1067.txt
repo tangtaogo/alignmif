@@ -1,0 +1,14 @@
+path = data/waymo/waymo_seq1067
+dataloader = waymo
+alpha_d = 10.0
+alpha_r = 1
+alpha_i = 1e1
+alpha_rgb = 10.0
+desired_resolution = 32768
+num_steps = 768
+upsample_steps = 64
+num_rays = 2048 
+num_rays_lidar = 2048 
+bound = 1
+scale = 0.005616805886875654
+offset = [3155.738324415057, 276.43629708149086, -26.15194319115626]

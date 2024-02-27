@@ -1,0 +1,14 @@
+sequence_id = 64
+path = data/aiodrive
+dataloader = aiodrive
+alpha_d = 1000.0
+alpha_r = 1
+alpha_i = 1e1
+alpha_rgb = 1000.0
+grad_loss = False
+desired_resolution = 32768
+num_steps = 768
+upsample_steps = 64
+bound = 1
+scale = 0.009685427922483175
+offset = [-53.91366738829319, 37.9419050195155, 3.6045176408809274]
