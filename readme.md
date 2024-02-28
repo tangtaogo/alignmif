@@ -1,6 +1,7 @@
 <h1 align="center">AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis</h1>
+<h3 align="center">[CVPR 2024]</h3>
 <p align="center">
-   <a href="https://arxiv.org/abs/2304.10406">
+   <a href="https://arxiv.org/pdf/2402.17483.pdf">
       <img src='https://img.shields.io/badge/paper-pdf-green?style=for-the-badge' alt='Paper PDF'></a>
 </p>
 <p align="center">
@@ -162,7 +163,7 @@ If you find our code or paper helps, please consider citing:
 @article{tao2024AlignMiF,
     title   = {AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis},
     author  = {Tao, Tang and Wang, Guangrun and Lao, Yixing and Chen, Peng and Liu, Jie and Lin, Liang and Yu, Kaicheng and Liang, Xiaodan}
-    journal = {},
+    journal = {arXiv preprint arXiv:2402.17483},
     year    = {2024}
 }
 ```
