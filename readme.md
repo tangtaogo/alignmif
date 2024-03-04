@@ -160,11 +160,11 @@ You can download our pre-trained models here (TODO).
 If you find our code or paper helps, please consider citing:
 
 ```bibtex
-@article{tao2024AlignMiF,
-    title   = {AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis},
-    author  = {Tao, Tang and Wang, Guangrun and Lao, Yixing and Chen, Peng and Liu, Jie and Lin, Liang and Yu, Kaicheng and Liang, Xiaodan}
-    journal = {arXiv preprint arXiv:2402.17483},
-    year    = {2024}
+@article{tang2024alignmif,
+  title={AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis},
+  author={Tang, Tao and Wang, Guangrun and Lao, Yixing and Chen, Peng and Liu, Jie and Lin, Liang and Yu, Kaicheng and Liang, Xiaodan},
+  journal={arXiv preprint arXiv:2402.17483},
+  year={2024}
 }
 ```
 
