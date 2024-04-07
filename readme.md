@@ -1,5 +1,5 @@
 <h1 align="center">AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis</h1>
-<h3 align="center">[CVPR 2024]</h3>
+<h3 align="center">[CVPR 2024 - Highlight]</h3>
 <p align="center">
    <a href="https://arxiv.org/pdf/2402.17483.pdf">
       <img src='https://img.shields.io/badge/paper-pdf-green?style=for-the-badge' alt='Paper PDF'></a>
