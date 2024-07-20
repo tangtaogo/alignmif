@@ -84,7 +84,7 @@ class NeRFNetwork(NeRFRenderer):
         )
 
         self.sigma_net_cat = tcnn.Network(
-            n_input_dims=self.encoder.n_output_dims * 2 + embedding_dim,
+            n_input_dims=self.encoder.n_output_dims * 2,
             n_output_dims=1 + self.geo_feat_dim,
             network_config={
                 "otype": "FullyFusedMLP",
@@ -263,11 +263,6 @@ class NeRFNetwork(NeRFRenderer):
                 'lr': lr
             },
         ]
-        if self.use_task_embedding:
-            params.append({
-                'params': self.task_embedding.parameters(),
-                'lr': lr
-            })
         if self.bg_radius > 0:
             params.append({'params': self.encoder_bg.parameters(), 'lr': lr})
             params.append({'params': self.bg_net.parameters(), 'lr': lr})

@@ -302,10 +302,10 @@ def main():
     if opt.network == 'tcnn':
         opt.fp16 = True
         assert opt.bg_radius <= 0, "background model is not implemented for --tcnn"
-        assert opt.enable_lidar and opt.enable_rgb, "single modality training"
+        assert opt.enable_lidar or opt.enable_rgb, "single modality training"
         if opt.enable_lidar:
             from lidarnerf.nerf.network_tcnn_lidar import NeRFNetwork
-        elif opt.enable_lidar:
+        elif opt.enable_rgb:
             from lidarnerf.nerf.network_tcnn_rgb import NeRFNetwork
         model = NeRFNetwork(
             encoding="hashgrid",

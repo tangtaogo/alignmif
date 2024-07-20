@@ -143,6 +143,10 @@ python main_alignmif.py -L --workspace kitti360-1908/rgb --enable_rgb --config c
 # multimodality implicit fusion
 python main_alignmif.py -L --workspace kitti360-1908/mif --enable_rgb --enable_lidar --config configs/kitti360_1908.txt --network mif
 # aligmif 
+## The SGI moudle employ a pre-trained lidar-nerf model as initialization
+## 1.First train a lidar-nerf model
+python main_alignmif.py -L --workspace kitti360-1908/lidar --enable_lidar --config configs/kitti360_1908.txt
+## 2.Then train alignmif
 python main_alignmif.py -L --workspace kitti360-1908/alignmif --enable_lidar --enable_rgb --config configs/kitti360_1908.txt --ckpt kitti360-1908/lidar/checkpoints/alignmif_ep0500.pth --activate_levels 8 --network alignmif
 
 ```

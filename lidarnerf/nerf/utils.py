@@ -1154,7 +1154,7 @@ class Trainer(object):
 
     def train(self, train_loader, valid_loader, max_epochs):
         if self.use_tensorboardX and self.local_rank == 0:
-            if is_ali_cluster() and self.opt.cluster_summary_path is not None:
+            if self.opt.cluster_summary_path is not None:
                 summary_path = self.opt.cluster_summary_path
             else:
                 summary_path = os.path.join(self.workspace, "run", self.name)

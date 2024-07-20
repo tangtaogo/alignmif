@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import numpy as np
 
 import tinycudann as tcnn
-from activation import trunc_exp
+from lidarnerf.activation import trunc_exp
 from .renderer import NeRFRenderer
 
 class NeRFNetwork(NeRFRenderer):
@@ -53,7 +53,7 @@ class NeRFNetwork(NeRFRenderer):
         )
 
         self.sigma_net = tcnn.Network(
-            n_input_dims=32,
+            n_input_dims=self.encoder.n_output_dims,
             n_output_dims=1 + self.geo_feat_dim,
             network_config={
                 "otype": "FullyFusedMLP",
@@ -118,7 +118,7 @@ class NeRFNetwork(NeRFRenderer):
 
         return sigma, color
 
-    def density(self, x):
+    def density(self, x, cal_lidar_color=False, **kwargs,):
         # x: [N, 3], in [-bound, bound]
 
         x = (x + self.bound) / (2 * self.bound) # to [0, 1]
@@ -135,7 +135,7 @@ class NeRFNetwork(NeRFRenderer):
         }
 
     # allow masked inference
-    def color(self, x, d, mask=None, geo_feat=None, **kwargs):
+    def color(self, x, d, cal_lidar_color=False, mask=None, geo_feat=None, **kwargs):
         # x: [N, 3] in [-bound, bound]
         # mask: [N,], bool, indicates where we actually needs to compute rgb.
 

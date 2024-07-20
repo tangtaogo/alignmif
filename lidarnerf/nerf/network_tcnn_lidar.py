@@ -81,7 +81,7 @@ class NeRFNetwork(NeRFRenderer):
             },
         )
 
-        self.in_dim_color = self.encoder_dir.n_output_dims + self.geo_feat_dim
+        self.in_dim_color = self.encoder_lidar_dir.n_output_dims + self.geo_feat_dim
 
         self.in_dim_lidar_color = (
             self.encoder_lidar_dir.n_output_dims + self.geo_feat_dim
@@ -101,7 +101,7 @@ class NeRFNetwork(NeRFRenderer):
     def forward(self, x, d):
         pass
 
-    def density(self, x):
+    def density(self, x, cal_lidar_color=True, **kwargs):
         # x: [N, 3], in [-bound, bound]
 
         x = (x + self.bound) / (2 * self.bound)  # to [0, 1]
@@ -118,7 +118,7 @@ class NeRFNetwork(NeRFRenderer):
         }
 
     # allow masked inference
-    def color(self, x, d, cal_lidar_color=False, mask=None, geo_feat=None, **kwargs):
+    def color(self, x, d, cal_lidar_color=True, mask=None, geo_feat=None, **kwargs):
         # x: [N, 3] in [-bound, bound]
         # mask: [N,], bool, indicates where we actually needs to compute rgb.
 
